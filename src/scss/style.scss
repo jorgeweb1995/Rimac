@@ -117,11 +117,15 @@ input[type="password"]{
 .form-input{
     position: relative;
     margin-bottom: 1rem;
-    label{
+
+    label, .icon-eye{
         position: absolute;
         top: 50%;
-        left: 16px;
         transform: translateY(-50%);
+    }
+
+    label{
+        left: 16px;
         cursor: text;
         pointer-events: none;
         color: var(--text-color-altern);
@@ -129,14 +133,21 @@ input[type="password"]{
         line-height: 1.5rem;
     }
 
+    .icon-eye{
+        cursor: pointer;
+        right: 16px;
+    }
+
     // Recordatorio:  Es necesario contar con un placeholder así sea vacío,
     // de lo contario esto el label estará por defecto con el cambio de posición.
+   
     input:focus + label, 
     input:not(:placeholder-shown) + label {
         transform: translateY(-26px);
         transition: all .1s linear;
         font-size: 12px;
     }
+
 }
 
 

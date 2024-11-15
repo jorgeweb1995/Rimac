@@ -139,17 +139,23 @@ input[type=password]::placeholder {
   position: relative;
   margin-bottom: 1rem;
 }
-.form-input label {
+.form-input label, .form-input .icon-eye {
   position: absolute;
   top: 50%;
-  left: 16px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+.form-input label {
+  left: 16px;
   cursor: text;
   pointer-events: none;
   color: var(--text-color-altern);
   font-size: 1rem;
   line-height: 1.5rem;
+}
+.form-input .icon-eye {
+  cursor: pointer;
+  right: 16px;
 }
 .form-input input:not(:-moz-placeholder-shown) + label {
   transform: translateY(-26px);
